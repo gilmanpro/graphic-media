@@ -1,0 +1,58 @@
+name: Solicitud de mejora
+title: "[Mejora] "
+labels: [mejora]
+body:
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo de solicitud
+      options:
+        - Nueva capacidad (algo que la skill no puede hacer aún)
+        - Mejora de un script existente
+        - Nueva referencia o tipo de diagrama
+        - Mejora de documentación/enrutador
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - Diagramas
+        - Planos / ingeniería / DXF
+        - Circuitos eléctricos
+        - 3D
+        - Gráficos de datos
+        - SVG / logos / iconos
+        - Posters / arte
+        - Imagen (edición, filtros, conversión)
+        - Vídeo
+        - Audio
+        - Instalación de herramientas
+    validations:
+      required: true
+  - type: textarea
+    id: que-falta
+    attributes:
+      label: ¿Qué necesitas que la skill pueda hacer?
+      description: Describe la tarea concreta de dibujo/edición con el máximo detalle posible.
+      placeholder: "P. ej.: generar un plano de fachada con ventanas y puertas marcadas como capas separadas exportable a DXF."
+    validations:
+      required: true
+  - type: textarea
+    id: salida
+    attributes:
+      label: Formato de salida esperado
+      placeholder: "P. ej.: SVG + PNG a 300dpi con fondo transparente."
+    validations:
+      required: true
+  - type: textarea
+    id: ejemplo
+    attributes:
+      label: Ejemplo de uso (prompt real)
+      placeholder: "P. ej.: «dibuja la fachada del local 8x4m con dos ventanas y una persiana»"
+  - type: input
+    id: herramienta
+    attributes:
+      label: ¿Herramienta/librería concreta en mente? (opcional)
+      placeholder: "P. ej.: ezdxf, openscad, un binario que ya uses..."

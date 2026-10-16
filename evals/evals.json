@@ -1,0 +1,65 @@
+{
+  "skill_name": "graphic-media",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Necesito un logo para mi startup 'NovaTech' (tecnologia espacial). Minimalista, cohete estilizado y wordmark elegante. Colores #1E3A5F y #FF6B35. Formato SVG escalable.",
+      "expected_output": "Un archivo SVG con icono de cohete + wordmark usando los colores indicados, viewBox correcto, accesibilidad (role/title/desc) y codigo limpio optimizado.",
+      "files": ["nova-tech-logo.svg"]
+    },
+    {
+      "id": 2,
+      "prompt": "Crea un diagrama de arquitectura cloud: un load balancer delante de 2 servidores web EC2 detras de una base de datos RDS. Entregalo en PNG de alta resolucion.",
+      "expected_output": "Script Python con la libreria diagrams ejecutado sin errores, PNG generado con los nodos ELB, EC2 (x2) y RDS conectados y etiquetados.",
+      "files": ["arquitectura.png"]
+    },
+    {
+      "id": 3,
+      "prompt": "Tengo foto.jpg (4032x3024). Recortala al cuadrado central 2000x2000, reducela a 800px de ancho, aplicale filtro sepia y guardala como salida.png sin modificar el original.",
+      "expected_output": "Imagen salida.png de 800x800 con tono sepia, original intacto; operaciones hechas con Pillow respetando orientacion EXIF.",
+      "files": ["salida.png"]
+    },
+    {
+      "id": 4,
+      "prompt": "Dibuja un plano de un apartamento de 8x6 metros con dos habitaciones, banio y sala, a escala, con cotas y el texto 'E: 1/50'. Formato SVG.",
+      "expected_output": "SVG con viewBox declarado, muros en trazo grueso, particiones internas, cotas con lineas finas, etiquetas legibles y escala anotada.",
+      "files": ["plano.svg"]
+    },
+    {
+      "id": 5,
+      "prompt": "Genera un grafico de lineas de 12 meses de metricas de tráfico con doble eje (visitas y conversion), grid suave, y guardalo en PNG con fondo transparente a 300 dpi.",
+      "expected_output": "Script matplotlib con subplots y ax.twinx(), dos ejes etiquetados con unidades, leyenda, savefig dpi=300 transparent=True y plt.close().",
+      "files": ["trafico.png"]
+    },
+    {
+      "id": 6,
+      "prompt": "Quiero un histograma animado en GIF que muestre como se acumulan 500 muestras de una distribucion normal frame a frame, con los ejes fijos para poder comparar.",
+      "expected_output": "Script matplotlib con FuncAnimation y PillowWriter que genera un GIF, bins y xlim constantes en todos los frames, ejes etiquetados y plt.close().",
+      "files": ["histograma.gif"]
+    },
+    {
+      "id": 7,
+      "prompt": "Tengo un boceto a lápiz de un personaje saludando (foto). Dame el guion visual de 3 planos y el prompt ordenado para animarlo manteniendo la cámara quieta y el estilo a lápiz.",
+      "expected_output": "Storyboard de 3 planos con duraciones y la acción descrita en orden de acontecimientos (no abstracta), con cámara y estilo explícitos y vistas de referencia para coherencia del personaje.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "Convierte grabacion.mov a mp4 H.264 compatible con web, quítale el ruido de fondo y comprímelo a menos de 5 MB sin perder legibilidad.",
+      "expected_output": "Tres pasadas con scripts/video.py (convertir con yuv420p, filtro denoise, comprimir con CRF alto) sobre salidas intermedias, verificando con info que el codec y la duración son los esperados.",
+      "files": ["salida.mp4"]
+    },
+    {
+      "id": 9,
+      "prompt": "El audio del podcast quedó a -21 LUFS y con silencios al principio. Normalízalo a -16, recorta los bordes en blanco y genera la imagen de la onda.",
+      "expected_output": "audio.py silencios -> normalizar (dos pasadas loudnorm midiendo antes) -> forma; orden correcto (normalizar al final) y salida con onda PNG 1200x300.",
+      "files": ["podcast_limpio.mp3", "onda.png"]
+    },
+    {
+      "id": 10,
+      "prompt": "Genera una figura 3D de la función z = sin(x)·cos(y) con cámara a 28° de elevación, fondo transparente y un GIF que la orbite 360 grados.",
+      "expected_output": "plot3d.py superficie con --func, --elev 28, --transparente y --gif; PNG y GIF rotatorio (PillowWriter) con los ejes etiquetados.",
+      "files": ["superficie.png", "superficie.gif"]
+    }
+  ]
+}

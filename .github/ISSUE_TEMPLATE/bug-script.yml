@@ -1,0 +1,30 @@
+name: Bug de script
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: input
+    id: comando
+    attributes:
+      label: Comando ejecutado
+      placeholder: "python scripts/video.py convertir a.mov -o a.mp4"
+    validations:
+      required: true
+  - type: textarea
+    id: salida-esperada
+    attributes:
+      label: Salida esperada
+      placeholder: "Un MP4 H.264 con audio AAC."
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: Error o salida obtenida
+      description: Pega el mensaje completo (incluye la última línea del traceback si lo hay).
+    validations:
+      required: true
+  - type: input
+    id: entorno
+    attributes:
+      label: Entorno
+      placeholder: "P. ej.: Windows 11, Python 3.14, FFmpeg 9.0"
